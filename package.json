@@ -1,0 +1,24 @@
+{
+  "name": "node01",
+  "version": "1.0.0",
+  "description": "complete Node.js guide",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js",
+    "start-server": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anthonyjt21/nodepractices.git"
+  },
+  "author": "Anthony Jimenez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/anthonyjt21/nodepractices/issues"
+  },
+  "homepage": "https://github.com/anthonyjt21/nodepractices#readme",
+  "dependencies": {
+    "nodemon": "^2.0.7"
+  }
+}

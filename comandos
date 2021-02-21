@@ -2,3 +2,4 @@ git remote add origin  https://github.com/anthonyjt21/nodepractices.git
 git remote -v
 git push origin master
 git pull origin master
+npm i nodemon
