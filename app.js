@@ -3,22 +3,14 @@ const bodyParser = require('body-parser');
 
 const app = express();
 
-app.use(bodyParser.urlencoded({extended: false}));
+const adminRoutes = require('./routes/admin');
 
-app.use('/add-product', (req, res, next) => {
-	//console.log('in another the middleware');
-	res.send(
-		'<form action="/product" method="POST"><input type="text" name="title"><button type="submit">Add Product</button></input></form>',
-	);
-});
-app.use('/product', (req, res, next) => {
-	console.log(req.body);
-	res.redirect('/');
-});
+const shopRoutes = require('./routes/shop');
 
-app.use('/', (req, res, next) => {
-	res.send('<h1>hello from express !</h1>');
-});
+app.use(bodyParser.urlencoded({extended: true}));
+
+app.use(adminRoutes);
+app.use(shopRoutes);
 
 //const server = http.createServer(app);
 
