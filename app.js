@@ -6,6 +6,9 @@ const rootDir = require('./util/path');
 
 const app = express();
 
+app.set('view engine','pug');
+app.set('views','views');
+
 const adminData = require('./routes/admin');
 const shopRoutes = require('./routes/shop');
 

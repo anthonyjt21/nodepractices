@@ -6,3 +6,4 @@ npm i nodemon
 npm install --save body-parser
 npm install --save express
 video 11
+npm install --save ejs pug express-handlebars
