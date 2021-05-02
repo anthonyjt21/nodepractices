@@ -7,6 +7,7 @@ html(lang="en")
         title #{docTitle}
         link(rel="stylesheet",href="/css/main.css")
         link(rel="stylesheet",href="/css/product.css")
+        link(rel="stylesheet",href="/css/forms.css")
 
     body
         header.main-header
@@ -17,20 +18,18 @@ html(lang="en")
                   li.main-header__item
                     a(href="/admin/add-product") Add Product
         main
-             .grid 
+          if prods.length >0
+              .grid 
                 each product in prods
-                article.card.product-item 
+                 article.card.product-item 
                   header.card__header
-                      h1.product__title Great Book
-                   div.card__image 
-                      img(src="https://i.picsum.photos/id/866/200/300.jpg?hmac=rcadCENKh4rD6MAp6V_ma-AyWv641M4iiOpe1RyFHeI")
-                   div.card__content
-                        h2.product__price $19.99
-                        p.product__description A very insteresting book about so many even more
-                    .card__actions
-                       button.btn Add to Cart 
-
-
-                   
-                  
-
+                      h1.product__title #{product.title} 
+                  div.card__image 
+                      img(src="https://i.picsum.photos/id/866/200/300.jpg?hmac=rcadCENKh4rD6MAp6V_ma-AyWv641M4iiOpe1RyFHeI" alt="A Book")
+                  div.card__content
+                      h2.product__price $19.99
+                      p.product__description A very insteresting book about so many even more
+                  .card__actions
+                      button.btn Add to Cart 
+          else 
+              h1 No products
