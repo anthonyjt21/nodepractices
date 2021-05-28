@@ -16,8 +16,7 @@ router.get('/add-product', (req, res, next) => {
 		formCSS:true,
 		productCSS:true,
 		activeAddProduct:true
-	});
-	//	res.sendFile(path.join(rootDir,'views','add-product.html'));
+	});	
 });
 
 // admin/add-product =>POST
